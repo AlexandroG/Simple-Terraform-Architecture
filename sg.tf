@@ -1,4 +1,4 @@
-# Creo sg per webserver layer
+# SG for webserver layer
 resource "aws_security_group" "web-sg" {
   name        = "Web-SG"
   description = "Allow HTTP inbound traffic"
@@ -24,7 +24,7 @@ resource "aws_security_group" "web-sg" {
   }
 }
 
-# Creo sg per traffico da ALB verso webserver
+#  SG for the traffic from ALB to webserver
 resource "aws_security_group" "webserver-sg" {
   name        = "Webserver-SG"
   description = "Allow inbound traffic from ALB"
@@ -50,7 +50,7 @@ resource "aws_security_group" "webserver-sg" {
   }
 }
 
-# Creo sg per database layer
+#  SG for database layer
 resource "aws_security_group" "database-sg" {
   name        = "Database-SG"
   description = "Allow inbound traffic from application layer"

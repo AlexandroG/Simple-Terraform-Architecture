@@ -1,4 +1,4 @@
-# creazione web subnet
+# creation of web subnet
 resource "aws_subnet" "web-subnet-1" {
   vpc_id                  = aws_vpc.vpc-test.id
   cidr_block              = "10.0.1.0/24"
@@ -19,7 +19,7 @@ resource "aws_subnet" "web-subnet-2" {
   }
 }
 
-# creazione app subnet
+# creation of app subnet
 resource "aws_subnet" "application-subnet-1" {
   vpc_id                  = aws_vpc.vpc-test.id
   cidr_block              = "10.0.11.0/24"
@@ -42,7 +42,7 @@ resource "aws_subnet" "application-subnet-2" {
   }
 }
 
-# creazione db subnet
+# creation of db subnet
 resource "aws_subnet" "database-subnet-1" {
   vpc_id            = aws_vpc.vpc-test.id
   cidr_block        = "10.0.21.0/24"

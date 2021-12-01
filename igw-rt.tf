@@ -1,4 +1,4 @@
-# creo una risorsa internet gw
+# creation of internet gw resource
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.vpc-test.id
   tags = {
@@ -6,7 +6,7 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
-# Creo la route table per il web layer
+# # creation of route table for the web layer
 resource "aws_route_table" "web-rt" {
   vpc_id       = aws_vpc.vpc-test.id
   route {
@@ -18,7 +18,7 @@ resource "aws_route_table" "web-rt" {
   }
 }
 
-# Creo le associazioni tra route table e subnet create
+# Creation of associations
 resource "aws_route_table_association" "ass-a" {
   subnet_id      = aws_subnet.web-subnet-1.id
   route_table_id = aws_route_table.web-rt.id

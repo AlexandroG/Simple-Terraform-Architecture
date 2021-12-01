@@ -21,3 +21,9 @@ aws configure # configure your AWS CLI profile
 ```
 - Make sure to change your credentials path and region in ```main.tf``` file before to initializate the project 
 
+
+N.B.
+There are some consideration:
+1. the purpose of this project is to start using terraform and understand how the various resources are created
+2. I've not used some resources necessary to deploy this kind of infrastructure like autoscaling group, efs etc..
+3. This infrastructure is not meant to be scalable and high reliability.

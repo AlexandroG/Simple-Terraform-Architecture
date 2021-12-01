@@ -1,4 +1,4 @@
-# Setting di terraform
+# Terraform setting
 terraform {
   required_providers {
     aws = {
@@ -8,10 +8,10 @@ terraform {
   }
 }
 
-# Configurazione del provider
+# Provider configuration
 provider "aws" {
   region = "eu-west-1"
-  shared_credentials_file = "/Users/alexandrogiorgianni/.aws/credentials"
-  profile                 = "alexandropriv"
+  shared_credentials_file = "/insert/your/path"
+  profile                 = "default"
 }
 
